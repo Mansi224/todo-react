@@ -1,15 +1,27 @@
 * {
-  font-family: "Josefin Sans", Arial, "Arial Narrow", sans-serif;
+  font-family: "Ubuntu", sans-serif;
+}
+
+body {
+  background-color: #292f33;
 }
 
 .main_div {
   width: 100%;
   height: 100vh;
-  background-color: #1f1d36;
+  background-color: #292f33;
   color: white;
   display: flex;
   justify-content: center;
   text-align: center;
+}
+
+.center_div {
+  border-top-left-radius: 42px;
+  background-color: #55acee;
+  height: 90vh;
+  width: 50vh;
+  margin-top: 20px;
 }
 
 .input {
@@ -25,20 +37,17 @@
 }
 
 button {
-  min-height: 10px;
-  width: 40px;
-  border-radius: 10%;
-  border-color: #864879;
-  color: rgb(43, 8, 8);
+  margin-left: 8px;
+  min-height: 20px;
+  width: 30px;
+  color: black;
   font-size: 20px;
-  border: none;
-  outline: none;
-  margin-left: 10px;
-  box-shadow: 5px 5px 15px -5px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  font-weight: bold;
 }
 
 button:hover {
-  background-color: #864879;
+  background-color: #66757f;
 }
 
 ol {
@@ -53,7 +62,7 @@ ol li {
   min-height: 40px;
   display: flex;
   align-items: center;
-  color: #e9a6a6;
+  color: whitesmoke;
   text-transform: capitalize;
 }
 
@@ -62,4 +71,39 @@ ol li {
   flex-direction: row;
   justify-content: left;
   align-items: center;
+}
+
+.todo_style .fa-times {
+  height: 20px;
+  width: 20px;
+  margin-left: 8px;
+  margin-right: 3px;
+  margin-top: 2px;
+  background-color: rgb(91, 92, 91);
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.todo_style .fa-times:hover {
+  background-color: red;
+}
+
+@media (max-width: 768px) {
+  .center_div {
+    width: 55%;
+  }
+
+  .todo_style .fa-times {
+    margin: 0 15px 0 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  button {
+    margin-left: 5px;
+    min-height: 40px;
+    width: 38px;
+    color: black;
+  }
 }
